@@ -9,7 +9,9 @@ NAMA : Ahmad Dzul Fadhli Hannan
 # Jawaban Tugas
 
 ## Soal 1  
-<img src="img/hello-world.png">
+<img src="img/hello-world.png">  
+
+Dengan mengganti teks seperti di contoh lalu ubah operasinya menjadi 18 - i dimana iterasi akan dimulai dari 18 - 0 terus sampai 18 dikurangi jumlah iterasi sebanyak 10.
 
 ## Soal 2  
 Karena semua pengembangan framework Flutter melibatkan pengetahuan/fitur mendalam dengan bahasa Dart; Kode aplikasi, kode plugin, dan manajemen dependensi semuanya menggunakan bahasa Dart beserta fitur-fiturnya. Memiliki pemahaman dasar yang kuat tentang Dart akan memudahkan Anda untuk menjadi lebih produktif dengan Flutter dan akan membuat Anda merasa nyaman dalam pengembangan Flutter.
