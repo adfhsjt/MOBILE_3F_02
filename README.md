@@ -44,4 +44,4 @@ Tidak menampilkan perulangan angka karena semua kondisi tidak terpenuhi.
 ## Tugas  
 <img src="img/tugas.png">  
 Penjelasan program:  
-Setiap angka dalam rentang tersebut akan dicek apakah memiliki pembagi selain satu dan dirinya sendiri dengan menggunakan dua buah perulangan. Jika sebuah angka tidak memiliki pembagi selain satu dan dirinya sendiri, maka angka itu dinyatakan sebagai bilangan prima. Setiap kali bilangan prima ditemukan, program akan mencetaknya, beserta nama dan NIM .
+Menampilkan deretan angka dari 0 hingga 201, lalu melakukan pengecekan apakah setiap angka tersebut merupakan bilangan prima. Jika angka adalah bilangan prima, program akan mencetak angka tersebut diikuti dengan nama dan NIM, sedangkan untuk angka yang bukan bilangan prima hanya mencetak angkanya saja. Pengecekan bilangan prima dilakukan dengan mengasumsikan angka sebagai prima, kecuali angka kurang dari 2 atau memiliki pembagi selain 1 dan dirinya sendiri, yang dideteksi dengan perulangan dari 2 hingga setengah dari nilai angka tersebut. 
