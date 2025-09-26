@@ -8,8 +8,8 @@
 
 <table>
   <tr>
-    <td><img src="img/p2-1.png" width="400"> "flutter run" di CMD</td>
-    <td><img src="img/p2-2.jpg" width="400"> flutter debug aplikasi di android</td>
+    <td><img src="img/p2-1.png" width="400"></td>
+    <td><img src="img/p2-2.jpg" width="400"></td>
   </tr>
 </table>
 
