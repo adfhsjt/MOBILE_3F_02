@@ -1,93 +1,39 @@
-# Pemograman Mobile - Pertemuan 5  
+# MOBILE - Pertemuan 6  
 
-# P1
+# Tugas Praktikum 1  
+
+## Nomor 1
+
+### P1  
 
 <img src="img/p1-1.png">  
 
-# P2  
+**Penjelasan:** Cara mendefinisikan sebuah widget titleSection yang menggunakan Row untuk menampilkan tata letak judul dan subjudul di sebelah kiri, serta sebuah ikon dan teks di sebelah kanan.
 
-<table>
-  <tr>
-    <td><img src="img/p2-1.png" width="400"></td>
-    <td><img src="img/p2-2.jpg" width="400"></td>
-  </tr>
-</table>
+### P2  
 
-# P3  
+<img src="img/p2-1.png">
 
-<table>
-  <tr>
-    <td><img src="img/p3-1.png" width="400"></td>
-    <td><img src="img/p3-2.jpg" width="400"></td>
-  </tr>
-</table>
+**Penjelasan:** Cara mendefinisikan sebuah widget buttonSection sebagai baris (Row) yang berisi tiga tombol (CALL, ROUTE, SHARE) yang dibuat menggunakan fungsi bantuan _buildButtonColumn, di mana setiap tombol terdiri dari ikon dan teks yang diwarnai dengan warna utama tema aplikasi.
 
-## [Link Github](https://github.com/adfhsjt/flutter-fundamental-part1)
+### P3  
 
-# P4  
+<img src="img/p3-1.png">
 
-<table>
-  <tr>
-    <td><img src="img/p4-1.png" width="400"></td>
-    <td><img src="img/p4-2.jpg" width="400"></td>
-  </tr>
-</table>
+**Penjelasan:** Cara mendefinisikan sebuah widget bernama textSection yang merupakan sebuah Container dengan padding 32 piksel, berisi blok teks instruksional yang dapat membungkus teks secara otomatis (softWrap).
 
-# P5 
+### P4  
 
-### Langkah 1
+<img src="img/p4-1.png">
 
-<table>
-  <tr>
-    <td><img src="img/p5-1-1.png" width="400"></td>
-    <td><img src="img/p5-1-2.jpg" width="400"></td>
-  </tr>
-</table>
+**Penjelasan:**  Cara mendefinisikan sebuah gambar dengan membuat folder images didalam assets, lalu mengimpor gambar ke pubspec.yaml, kemudian menampilkannya didalam body. Dan terakhir mengganti column menjadi ListView agar halaman bisa menampilkan semua konten dalam berbagai ukuran layar device tanpa terpotong.
 
-### Langkah 2
+## Nomor 2
 
-<table>
-  <tr>
-    <td><img src="img/p5-2-1.png" width="400"></td>
-    <td><img src="img/p5-2-2.jpg" width="400"></td>
-  </tr>
-</table>
+<img src="img/t1-2.png">
 
-### Langkah 3
+# Tugas 2
 
-<table>
-  <tr>
-    <td><img src="img/p5-3-1.png" width="400"></td>
-    <td><img src="img/p5-3-2.gif" width="400"></td>
-  </tr>
-</table>
-
-### Langkah 4
-
-<table>
-  <tr>
-    <td><img src="img/p5-4-1.png" width="400"></td>
-    <td><img src="img/p5-4-2.gif" width="400"></td>
-  </tr>
-</table>
-
-### Langkah 5
-
-<table>
-  <tr>
-    <td><img src="img/p5-5-1.png" width="400"></td>
-    <td><img src="img/p5-5-2.gif" width="400"></td>
-  </tr>
-</table>
-
-### Langkah 6
-
-<table>
-  <tr>
-    <td><img src="img/p5-6-1.png" width="400"></td>
-    <td><img src="img/p5-6-2.gif" width="400"></td>
-  </tr>
-</table>
-
+## Nomor 1
 
 
