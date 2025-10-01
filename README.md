@@ -36,4 +36,65 @@
 
 ## Nomor 1
 
+<img src="img/t2-1.png">
+
+**Penjelasan:** modifikasi home_page bagian onTap dengan menambahkan arguments: item untuk mereturn value item yang diklik.
+
+## Nomor 2
+
+<img src="img/t2-2.gif">
+
+**Penjelasan:** Menerima return value dari arguments home_page ke item_page.
+
+## Nomor 3
+
+<img src="img/t2-3-1.png">
+
+**Penjelasan:** Tambahkan atribut image, stok, rating, dan deskripsi pada model item.
+
+<img src="img/t2-3-2.gif">
+
+**Penjelasan:** Menampilkan list item dalam bentuk gridView seperti aplikasi marketplace pada umumnya.
+
+## Nomor 4
+
+<img src="img/t2-4.gif">
+
+**Penjelasan:** Menambahkan Hewo widget untuk navigasi dari home_page ke item_page sesuai dengan item yang diklik.
+
+## Nomor 5
+
+<img src="img/t2-5.gif">
+
+**Penjelasan:** Modifikasi header warna ungu dan footer menampilkan nama dan nim pada home_page dan item_page.
+
+## Nomor 6
+
+<img src="img/t2-6-1.png">
+
+**Penjelasan:** Install go_router di terminal.
+
+<img src="img/t2-6-2.png">
+
+**Penjelasan:**  Kofigurasi go_router pada pubspec.yaml
+
+<img src="img/t2-6-3.png">
+
+**Penjelasan:** Tambahkan app_router.dart pada lib/config dan set path dan name page yang ingin dituju.
+
+<img src="img/t2-6-4.png">
+
+**Penjelasan:** Modifikasi main.dart untuk mereturn MaterialApp sebagai route dari app_router.dart.
+
+<img src="img/t2-6-5.png">
+
+**Penjelasan:** modifikasi home_page pada onTap ganti menjadi pushNamed route ke 'item' dan mereturn value dari item.
+
+<img src="img/t2-6-6.png">
+
+**Penjelasan:** Modifikasi item_page pada bagian konstruktor item menjadi seperti di atas.
+
+<img src="img/t2-6-7.gif">
+
+**Penjelasan:** Tampilan akhir dari penerapan go_route. Tidak ada yang berubah, tapi dengan menggunakan go_route kita bisa memanggil route dengan lebih mudah karena route bisa didefinisikan dengan nama dalam String.
 
