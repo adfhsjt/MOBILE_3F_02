@@ -42,3 +42,29 @@ NIM: 2341720106
 
 Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
 
+# Tugas 2
+
+## Soal 1
+
+<img src="img/p2-1.gif">
+
+**Penjelasan**: Tidak ada perubahan besar dari tampilan UI dibandingkan sebelumnya, tetapi ada penambahan counter list pada bagian bawah/footer. Secara fungsi sama seperti pada praktikum 1.
+
+## Soal 2
+
+**Penjelasan**: Karena kelas PlanProvider yang mewarisi InheritedNotifier, digunakan agar widget turunannya dapat mengakses data dan otomatis diberi tahu jika data berubah. InheritedNotifier digunakan karena selain mewarisi sifat InheritedWidget, juga dapat memberitahukan perubahan ke widget turunannya saat notifier. Misal, ValueNotifier<Plan> berubah.
+
+## Soal 3
+
+**Penjelasan**: Method completedCount digunakan untuk menghitung jumlah tugas yang sudah selesai, sedangkan completenessMessage digunakan untuk menampilkan pesan progres penyelesaian tugas.
+
+## Soal 4
+
+<img src="img/p2-4.gif">
+
+**Penjelasan**: Menampilkan daftar tugas/task list pada layar utama dengan progress penyelesaian tugas/completenessMessage yang selalu terlihat di bagian bawah layar, menggunakan widget SafeArea agar tidak tertutup elemen sistem pada perangkat.
+
+## Soal 5
+
+Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
+
