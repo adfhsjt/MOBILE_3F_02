@@ -68,3 +68,20 @@ Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke do
 
 Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke dosen yang telah disepakati !
 
+# Tugas 3
+
+## Soal 1
+
+<img src="img/p3-1.gif">
+
+**Penjelasan**: Menampilkan UI plan, jika tidak ada plan maka akan menampilkan icon dokumen dan teks tidak ada plan. Bisa menambahkan plan, dan saat diklik pada add plan lalu enter pada keyboard, plan yang dibuat maka bisa membuat list task, untuk triger menyimpan task nya harus menggunakan centang/ok pada keyboard, atau saat selesai mengisi field kembali ke menu plan. Jika setelah mengisi field langsung klik field lain tanpa menekan centang/ok pada keyboard, maka isi task tidak akan tersimpan. Dan pada checklist task setiap saat masuk ke plan hanya bisa melalukan centang/uncentang 1 kali, dan jika centang 2 kali maka data centang/uncentang sebelumnya tidak akan berubah.
+
+## Soal 2
+
+**Penjelasan**: Menggambarkan alur navigasi dari halaman utama PlanCreatorScreen ke halaman detail plan PlanScreen dalam aplikasi. PlanProvider diletakkan di atas kedua screen agar state/daftar Plan tetap disimpan saat navigasi antar screen. Navigator.push digunakan untuk berpindah halaman, dan struktur widget tree berubah sesuai tampilan yang diakses user.
+
+## Soal 3
+
+<img src="img/p3-1.gif">
+
+**Penjelasan**: Membuat aplikasi plan yang memungkinkan pengguna menambah plan beserta daftar task di dalamnya. Task dapat dicentang atau tidak, dan setiap kali masuk ke halaman plan hanya diperbolehkan satu kali perubahan.
