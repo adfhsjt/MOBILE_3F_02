@@ -33,5 +33,15 @@ Langkah 2: Fungsi async count menunggu (await) tiga fungsi asinkron, menjumlahka
 
 <img src="img/W11-Soal 4.gif">
 
+## W11: Soal 5
+
+**Jawaban Pertanyaan:**
+
+Fungsi untuk membuat Completer sehingga getNumber mengembalikan Future yang akan diselesaikan oleh calculate setelah menunggu 5 detik dengan nilai 42.
+
+**Hasil Running:**
+
+<img src="img/W11-Soal 5.gif">
+
 
 
