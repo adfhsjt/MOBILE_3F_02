@@ -208,6 +208,24 @@ Tidak ada perubahan UI, hasilnya sama dengan praktikum sebelumnya. Hanya menamba
 
 <img src="img/W11-Soal 14.gif">
 
+## W11: Soal 15
+
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+Silakan ganti dengan warna tema favorit Anda.
+
+```dart
+class _NavigationFirstState extends State<NavigationFirst> {
+  Color color = Colors.orange.shade700;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: color,
+      appBar: AppBar(
+        title: const Text('Navigation First Screen Hannan'),
+      ),
+```
+
 
 
 
