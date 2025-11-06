@@ -56,12 +56,48 @@ Langkah 5–6, calculate2 dibungkus try–catch dan disiapkan untuk menghasilkan
 <img src="img/W11-Soal 6.gif">
 
 
-# W11: Soal 7
+## W11: Soal 7
 
 **Hasil Running:**
 
 <img src="img/W11-Soal 7.gif">
 
+## W11: Soal 8
+
+**Modifikasi Kode:**
+
+```dart
+  void returnFG() {
+    // FutureGroup<int> futureGroup = FutureGroup<int>();
+    // futureGroup.add(returnOneAsync());
+    // futureGroup.add(returnTwoAsync());
+    // futureGroup.add(returnThreeAsync());
+    // futureGroup.close();
+    final futures = Future.wait<int>([
+      returnOneAsync(),
+      returnTwoAsync(),
+      returnThreeAsync(),
+    ]);
+    // futureGroup.future.then((List<int> value) {
+    futures.then((List<int> value) {
+      int total = 0;
+      for (var element in value) {
+        total += element;
+      }
+      setState(() {
+        result = total.toString();
+      });
+    });
+  }
+```
+
+**Jawaban Pertanyaan:**
+
+Langkah 1 menggunakan FutureGroup untuk menambah Future satu per satu lalu “close”, biasanya dipakai jika daftar Future bersifat dinamis.
+
+Langkah 4 memakai Future.wait dengan daftar Future yang sudah diketahui, keduanya menunggu semua selesai lalu menjumlahkan hasil, biasanya dipakai karena lebih sederhana dan semua Future sudah fix.
+
+**Untuk hasil running sama seperti langkah 7**
 
 
 
