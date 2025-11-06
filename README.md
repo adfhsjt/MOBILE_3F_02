@@ -56,6 +56,14 @@ Langkah 5–6, calculate2 dibungkus try–catch dan disiapkan untuk menghasilkan
 <img src="img/W11-Soal 6.gif">
 
 
+# W11: Soal 7
+
+**Hasil Running:**
+
+<img src="img/W11-Soal 7.gif">
+
+
+
 
 
 
