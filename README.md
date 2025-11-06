@@ -225,6 +225,20 @@ class _NavigationFirstState extends State<NavigationFirst> {
         title: const Text('Navigation First Screen Hannan'),
       ),
 ```
+## W11: Soal 16
+
+**Hasil Running:**
+
+<img src="img/W11-Soal 16-1.gif">
+
+**Jawaban Pertanyaan:**
+
+Saat tombol Change Color ditekan, layar berpindah ke NavigationSecond, ketika menekan tombol Red/Green/Blue, layar kedua menutup (Navigator.pop) sambil mengirimkan warna yang dipilih ke layar pertama, lalu Future dari Navigator.push selesai dengan nilai warna tersebut, disimpan ke variabel color, dan dipanggil setState sehingga Scaffold pada NavigationFirst dibangun ulang dengan backgroundColor yang baru sesuai pilihan, jika kembali tanpa memilih (ikon back), nilai yang diterima null sehingga operator ?? mengembalikan Colors.blue.
+
+**Ubah 3 Warna:**
+
+<img src="img/W11-Soal 16.gif">
+
 
 
 
