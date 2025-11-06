@@ -170,6 +170,46 @@ Tidak ada perubahan UI, hasilnya sama dengan praktikum sebelumnya. Perubahan pad
 
 <img src="img/W11-Soal 13.gif">
 
+## W11: Soal 14
+
+**Perubahan Kode:**
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Current Location Hannan')),
+      body: Center(
+        child: FutureBuilder<Position>(
+          future: position,
+          builder: (BuildContext context, AsyncSnapshot<Position> snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const CircularProgressIndicator();
+            } else if (snapshot.connectionState == ConnectionState.done) {
+              if (snapshot.hasError) {
+                return Text('Something terrible happened!');
+              }
+              return Text(snapshot.data.toString());
+            } else {
+              return const Text('');
+            }
+          },
+        ),
+      ),
+    );
+  }
+```
+
+**Jawaban Pertanyaan:**
+
+Tidak ada perubahan UI, hasilnya sama dengan praktikum sebelumnya. Hanya menambahkan pemeriksaan jika error saat mendapatkan lokasi perangkat.
+
+**Hasil Running:**
+
+<img src="img/W11-Soal 14.gif">
+
+
+
 
 
 
