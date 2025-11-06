@@ -160,6 +160,17 @@ Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
 
 **Ya**, karena pada saat menjalankan di browser saya **memberikan izin lokasi** pada site/aplikasi, ini juga berlaku pada android, saya **memberikan izin lokasi** pada aplikasinya.
 
+## W11: Soal 13
+
+**Jawaban Pertanyaan:**
+
+Tidak ada perubahan UI, hasilnya sama dengan praktikum sebelumnya. Perubahan pada Praktikum 7 hanya mengubah menjadi FutureBuilder sehingga membuat tampilan otomatis bereaksi terhadap status Future sehingga kode lebih ringkas.
+
+**Hasil Running:**
+
+<img src="img/W11-Soal 13.gif">
+
+
 
 
 
