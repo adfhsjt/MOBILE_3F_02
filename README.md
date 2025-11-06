@@ -123,6 +123,23 @@ Langkah 1 menangani hasil/error dengan chaining Future (then/catchError/whenComp
 Langkah 4 membungkusnya dalam fungsi async handleError dan menangani dengan try/catch/finally (async/await) sehingga kode lebih tertata namun hasilnya sama.
 
 
+## W11: Soal 11
+
+**Modifikasi pada title menambahkan nama panggilan**
+```dart
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Current Location Hannan')),
+      body: Center(child: Text(myPosition)),
+    );
+  }
+```
+
+
+
+
+
 
 
 
