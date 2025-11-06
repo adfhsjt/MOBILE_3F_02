@@ -97,7 +97,7 @@ Langkah 1 menggunakan FutureGroup untuk menambah Future satu per satu lalu “cl
 
 Langkah 4 memakai Future.wait dengan daftar Future yang sudah diketahui, keduanya menunggu semua selesai lalu menjumlahkan hasil, biasanya dipakai karena lebih sederhana dan semua Future sudah fix.
 
-**Untuk hasil running sama seperti langkah 7**
+**Untuk hasil running sama seperti Soal 7**
 
 ## W11: Soal 9
 
@@ -108,6 +108,19 @@ Langkah 4 memakai Future.wait dengan daftar Future yang sudah diketahui, keduany
 **Hasil Running:**
 
 <img src="img/W11-Soal 9.gif">
+
+## W11: Soal 10
+
+**Hasil Running:**
+
+<img src="img/W11-Soal 10.gif">
+
+**Hasilnya sama seperti Soal 9**
+
+**Jawaban Pertanyaan:**
+
+Langkah 1 menangani hasil/error dengan chaining Future (then/catchError/whenComplete) langsung di onPressed. 
+Langkah 4 membungkusnya dalam fungsi async handleError dan menangani dengan try/catch/finally (async/await) sehingga kode lebih tertata namun hasilnya sama.
 
 
 
