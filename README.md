@@ -237,20 +237,90 @@ Saat tombol Change Color ditekan, layar berpindah ke NavigationSecond, ketika me
 
 **Ubah 3 Warna:**
 
+**Kode:**
+
+```dart
+body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            ElevatedButton(
+              child: const Text('Yellow'),
+              onPressed: () {
+                color = Colors.yellow.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Pink'),
+              onPressed: () {
+                color = Colors.pink.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Magenta'),
+              onPressed: () {
+                color = Colors.purpleAccent.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+          ],
+        ),
+      ),
+```
+
+**Hasil Running:**
+
 <img src="img/W11-Soal 16.gif">
 
+## W11: Soal 17
 
+**Hasil Running:**
 
+<img src="img/W11-Soal 17-1.gif">
 
+**Jawaban Pertanyaan:**
 
+Saat tombol Change Color ditekan, dialog muncul. Ketika menekan Yellow, Pink, atau Magenta, handler tombol mengubah variabel state color ke warna yang dipilih lalu menutup dialog dengan Navigator.pop, sehingga Future showDialog selesai dan eksekusi lanjut ke setState(), yang memicu rebuild Scaffold dengan backgroundColor: color, hasilnya layar berubah menjadi warna yang dipilih. barrierDismissible: false membuat dialog hanya bisa ditutup lewat salah satu tombol, dan meski nilai warna juga “dipop”, nilai itu tidak ditangkap karena variabel state sudah diubah langsung.
 
+**Ubah 3 Warna:**
 
+**Kode:**
 
+```dart
+builder: (_) {
+        return AlertDialog(
+          title: const Text('Very important question'),
+          content: const Text('Please choose a color'),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('Yellow'),
+              onPressed: () {
+                color = Colors.yellow.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+            TextButton(
+              child: const Text('Pink'),
+              onPressed: () {
+                color = Colors.pink.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+            TextButton(
+              child: const Text('Magenta'),
+              onPressed: () {
+                color = Colors.purpleAccent.shade700;
+                Navigator.pop(context, color);
+              },
+            ),
+          ],
+        );
+      },
+```
 
+**Hasil Running:**
 
-
-
-
-
-
+<img src="img/W11-Soal 17-2.gif">
 
