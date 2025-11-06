@@ -99,6 +99,19 @@ Langkah 4 memakai Future.wait dengan daftar Future yang sudah diketahui, keduany
 
 **Untuk hasil running sama seperti langkah 7**
 
+## W11: Soal 9
+
+**Debug Console**
+
+<img src="img/W11-Soal 9-1.png">
+
+**Hasil Running:**
+
+<img src="img/W11-Soal 9.gif">
+
+
+
+
 
 
 
