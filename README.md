@@ -136,6 +136,31 @@ Langkah 4 membungkusnya dalam fungsi async handleError dan menangani dengan try/
   }
 ```
 
+## W11: Soal 12
+
+**Hasil 1: Tanpa loading**
+
+<img src="img/W11-Soal 11-1.gif">
+
+**Hasil 2: Dengan loading**
+
+<img src="img/W11-Soal 11-2.gif">
+
+**Hasil 3: Dengan loading 3 detik**
+
+<img src="img/W11-Soal 11-3.gif">
+
+**Hasil 4: di browser**
+
+<img src="img/W11-Soal 11-Browser.gif">
+
+Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?
+
+**Jawaban pertanyaan:**
+
+**Ya**, karena pada saat menjalankan di browser saya **memberikan izin lokasi** pada site/aplikasi, ini juga berlaku pada android, saya **memberikan izin lokasi** pada aplikasinya.
+
+
 
 
 
