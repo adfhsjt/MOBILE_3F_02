@@ -43,5 +43,19 @@ Fungsi untuk membuat Completer sehingga getNumber mengembalikan Future yang akan
 
 <img src="img/W11-Soal 5.gif">
 
+## W11: Soal 6
+
+**Jawaban Pertanyaan:**
+
+Langkah 2, getNumber menjalankan calculate yang hanya menunggu 5 detik lalu selalu menyelesaikan Future secara sukses dengan completer.complete(42), sehingga tidak ada jalur gagal dan .catchError tidak akan pernah terpanggil.
+
+Langkah 5–6, calculate2 dibungkus try–catch dan disiapkan untuk menghasilkan kegagalan (dengan melempar Exception atau memanggil completer.completeError), sehingga Future dari getNumber bisa sukses (42) atau gagal dan onPressed menambahkan .catchError untuk menangkapnya dan menampilkan pesan error.
+
+**Hasil Running:**
+
+<img src="img/W11-Soal 6.gif">
+
+
+
 
 
