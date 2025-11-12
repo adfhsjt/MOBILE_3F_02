@@ -41,6 +41,14 @@ Kode tersebut membuat sebuah fungsi getColors yang akan menghasilkan aliran data
 
 <img src="img/W12-Soal 4.gif">
 
+## Soal 5
+
+**Jawaban:**
+
+await for akan menjeda eksekusi fungsi untuk memproses setiap event stream secara berurutan hingga selesai, sedangkan .listen() mendaftarkan sebuah callback untuk menangani event di latar belakang tanpa menjeda eksekusi kode setelahnya.
+
+
+
 
 
 
