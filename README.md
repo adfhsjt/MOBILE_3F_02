@@ -90,6 +90,26 @@ Mendefinisikan sebuah StreamTransformer yang akan memodifikasi data pada sebuah 
 
 <img src="img/W12-Soal 8.gif">
 
+## Soal 9
+
+**Jawaban:**
+
+Langkah 2 mengambil StreamController dari NumberStream (numberStreamController = numberStream.controller) agar widget memiliki akses ke stream dan sink. 
+
+Langkah 6 membatalkan subscription pada dispose (subscription.cancel()) untuk menghentikan pendengaran stream sehingga tidak terjadi memory leak atau setState setelah widget di-dispose. 
+
+Langkah 8 pada addRandomNumber memeriksa apakah controller belum ditutup lalu mengirim nilai acak ke stream (addNumberToSink) atau, bila sudah tertutup, menandai kondisi gagal dengan mengatur lastNumber menjadi -1.
+
+**Hasil Running:**
+
+<img src="img/W12-Soal 9.gif">
+
+**Terminal:**
+
+<img src="img/W12-Soal 9-1.png">
+
+
+
 
 
 
