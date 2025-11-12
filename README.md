@@ -58,6 +58,27 @@ Fungsi initState menyiapkan listener untuk memperbarui tampilan UI setiap kali a
 <img src="img/W12-Soal 6.gif">
 
 
+## Soal 7
+
+**Jawaban:**
+
+addRandomNumber sekarang sengaja memicu sebuah error pada stream, yang kemudian ditangkap oleh listener .onError untuk mengubah dan menampilkan nilai lastNumber menjadi -1 di UI.
+
+**Hasil Running:**
+
+<img src="img/W12-Soal 7.gif">
+
+**Kembalikan Semula:**
+
+```dart
+void addRandomNumber() {
+    Random random = Random();
+    int myNum = random.nextInt(10);
+    numberStream.addNumberToSink(myNum);
+    // numberStream.addError();
+  }
+```
+
 
 
 
