@@ -27,6 +27,17 @@ final List<Color> colors=[
   ];
 ```
 
+## Soal 3
+
+**Jawaban:**
+
+yield* pada fungsi async* tersebut berfungsi untuk memasukkan semua nilai dari sebuah stream lain ke dalam stream yang sedang dibuat. Dalam kode ini, yield* mengambil stream yang dibuat oleh Stream.periodic (yang menghasilkan nilai setiap 1 detik) dan menyalurkan nilai-nilai tersebut ke dalam stream getColors.
+
+Kode tersebut membuat sebuah fungsi getColors yang akan menghasilkan aliran data (stream) berupa satu objek Color baru setiap detiknya, di mana warna yang dihasilkan akan berganti-ganti secara berurutan sesuai dengan isi dari list colors.
+
+
+
+
 
 
 
