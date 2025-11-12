@@ -80,6 +80,17 @@ void addRandomNumber() {
 ```
 
 
+## Soal 8
+
+**Jawaban:**
+
+Mendefinisikan sebuah StreamTransformer yang akan memodifikasi data pada sebuah stream, di mana setiap data integer yang masuk akan dikalikan 10, dan setiap error yang terjadi akan diubah menjadi data bernilai -1. Selanjutnya, transformer ini diterapkan pada stream utama untuk menciptakan aliran data baru yang sudah termodifikasi. Terakhir, kode tersebut akan "mendengarkan" aliran data baru ini dan memperbarui tampilan UI dengan nilai yang sudah ditransformasi, baik itu hasil perkalian sepuluh ataupun nilai -1 jika terjadi error pada stream aslinya.
+
+**Hasil Running:**
+
+<img src="img/W12-Soal 8.gif">
+
+
 
 
 
