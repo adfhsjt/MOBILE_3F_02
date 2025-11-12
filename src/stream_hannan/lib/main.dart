@@ -30,29 +30,35 @@ class StreamHomePage extends StatefulWidget {
 class _StreamHomePageState extends State<StreamHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Stream Hannan')),
-      // body: Container(decoration: BoxDecoration(color: bgColor)),
-      body: SizedBox(
-        width: double.infinity,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(lastNumber.toString()),
-            ElevatedButton(
-              onPressed: () => addRandomNumber(),
-              child: Text('New Random Number'),
-            ),
-            ElevatedButton(
-              onPressed: () => stopStream(),
-              child: Text('Stop Subcription'),
-            ),
-          ],
+  return Scaffold(
+    appBar: AppBar(title: const Text('Stream Hannan')),
+    body: Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(values),
+        SizedBox(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(lastNumber.toString()),
+              ElevatedButton(
+                onPressed: addRandomNumber,
+                child: const Text('New Random Number'),
+              ),
+              ElevatedButton(
+                onPressed: stopStream,
+                child: const Text('Stop Subscription'),
+              ),
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      ],
+    ),
+  );
+}
 
   Color bgColor = Colors.blueGrey;
   late ColorStream colorStream;
@@ -64,6 +70,9 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late StreamTransformer transformer;
 
   late StreamSubscription subscription;
+
+  late StreamSubscription subscription2;
+  String values = '';
 
   void changeColor() async {
     // await for (var eventColor in colorStream.getColors()) {
@@ -120,7 +129,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
   void initState() {
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
-    Stream stream = numberStreamController.stream;
+    Stream stream = numberStreamController.stream.asBroadcastStream();
     subscription = stream.listen((event) {
       setState(() {
         lastNumber = event;
@@ -133,6 +142,11 @@ class _StreamHomePageState extends State<StreamHomePage> {
     });
     subscription.onDone(() {
       print("OnDone was called");
+    });
+    subscription2 = stream.listen((event){
+      setState(() {
+        values += '$event - ';
+      });
     });
     super.initState();
   }

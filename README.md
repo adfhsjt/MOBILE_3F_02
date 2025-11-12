@@ -108,6 +108,27 @@ Langkah 8 pada addRandomNumber memeriksa apakah controller belum ditutup lalu me
 
 <img src="img/W12-Soal 9-1.png">
 
+## Soal 10
+
+**Hasil Running:**
+
+<img src="img/W12-Soal 10.gif">
+
+**Jawaban:**
+
+Error terjadi karena stream dari StreamController biasa adalah single‑subscription, sehingga dipanggil listen dua kali (subscription dan subscription2) pada stream yang sama dan menimbulkan “Bad state: Stream has already been listened to.”
+
+## Soal 11
+
+**Jawaban:**
+
+Setiap kali tombol New Random Number ditekan angka terbaru tampil di lastNumber dan riwayatnya bertambah di values (mis. “3 - 7 - ...”), pembaruan bisa dihentikan dengan Stop, dan ini bisa terjadi karena stream dikonversi menjadi broadcast (asBroadcastStream) sehingga dua listener menerima event yang sama tanpa error single-subscription.
+
+**Hasil Running:**
+
+<img src="img/W12-Soal 11.gif">
+
+
 
 
 
