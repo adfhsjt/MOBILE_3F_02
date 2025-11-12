@@ -47,7 +47,15 @@ Kode tersebut membuat sebuah fungsi getColors yang akan menghasilkan aliran data
 
 await for akan menjeda eksekusi fungsi untuk memproses setiap event stream secara berurutan hingga selesai, sedangkan .listen() mendaftarkan sebuah callback untuk menangani event di latar belakang tanpa menjeda eksekusi kode setelahnya.
 
+## Soal 6
 
+**Jawaban:**
+
+Fungsi initState menyiapkan listener untuk memperbarui tampilan UI setiap kali ada data baru yang masuk ke stream, sementara fungsi addRandomNumber bertugas menghasilkan angka acak untuk dimasukkan ke dalam stream tersebut.
+
+**Hasil Running:**
+
+<img src="img/W12-Soal 6.gif">
 
 
 
