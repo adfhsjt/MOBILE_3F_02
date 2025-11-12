@@ -35,6 +35,12 @@ yield* pada fungsi async* tersebut berfungsi untuk memasukkan semua nilai dari s
 
 Kode tersebut membuat sebuah fungsi getColors yang akan menghasilkan aliran data (stream) berupa satu objek Color baru setiap detiknya, di mana warna yang dihasilkan akan berganti-ganti secara berurutan sesuai dengan isi dari list colors.
 
+## Soal 4
+
+**Hasil Running:**
+
+<img src="img/W12-Soal 4.gif">
+
 
 
 
