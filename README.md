@@ -140,7 +140,15 @@ Langkah 7, StreamBuilder berlangganan ke numberStream dengan nilai awal 0, otoma
 
 <img src="img/W12-Soal 12.gif">
 
+## Soal 13
 
+**Jawaban:**
+
+Mempraktikkan pola BLoC untuk memisahkan logika bisnis dari UI dengan pendekatan reaktif berbasis stream: kelas RandomNumberBloc menampung logika untuk menghasilkan angka acak, memiliki “event input” melalui Sink generateRandom (memicu proses saat FAB ditekan) dan “state output” melalui Stream randomNumber, sedangkan RandomScreen hanya berperan sebagai View yang berlangganan state melalui StreamBuilder agar tampilan otomatis ter-update tanpa mengetahui detail cara angka dihasilkan. Tombol FloatingActionButton mengirim event ke BLoC (add null ke sink), BLoC memprosesnya (Random().nextInt(10)) lalu mengemit state baru ke stream, dan dispose menutup StreamController untuk mencegah kebocoran memori, di sinilah konsep pola BLoC diterapkan: UI -> event (sink) -> BLoC (olah) -> state (stream) -> UI.
+
+**Hasil Running:**
+
+<img src="img/W12-Soal 13.gif">
 
 
 
