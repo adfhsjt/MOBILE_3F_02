@@ -1,18 +1,7 @@
-# Pemograman Mobile - Pertemuan 12  
+import 'package:flutter/material.dart';
 
-## Soal 1
-
-```dart
-title: 'Stream Hannan',
-      theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
-      ),
-```
-
-## Soal 2
-
-```dart
-final List<Color> colors=[
+class ColorStream{
+  final List<Color> colors=[
     Colors.blueGrey,
     Colors.amber,
     Colors.deepPurple,
@@ -25,11 +14,4 @@ final List<Color> colors=[
     Colors.lime,
     Colors.indigo,
   ];
-```
-
-
-
-
-
-
-
+}
