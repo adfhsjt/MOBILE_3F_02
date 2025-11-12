@@ -128,6 +128,18 @@ Setiap kali tombol New Random Number ditekan angka terbaru tampil di lastNumber 
 
 <img src="img/W12-Soal 11.gif">
 
+## Soal 12
+
+**Jawaban:**
+
+Langkah 3, class NumberStream membuat stream integer melalui getNumbers() yang setiap 1 detik menghasilkan angka acak 0–9 menggunakan Stream.periodic lalu meneruskannya dengan async*/yield*. 
+
+Langkah 7, StreamBuilder berlangganan ke numberStream dengan nilai awal 0, otomatis membangun ulang UI tiap event masuk untuk menampilkan angka terbaru di tengah dengan teks besar (fontSize 96), mencetak “Error!” jika terjadi error, dan menampilkan widget kosong (SizedBox.shrink) bila belum ada data.
+
+**Hasil Running:**
+
+<img src="img/W12-Soal 12.gif">
+
 
 
 
