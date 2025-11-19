@@ -14,3 +14,8 @@ theme: ThemeData(
       ),
 ```
 
+## Soal 2
+
+<img src="img/s-2.png">
+
+
