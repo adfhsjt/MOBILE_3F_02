@@ -18,4 +18,8 @@ theme: ThemeData(
 
 <img src="img/s-2.png">
 
+## Soal 3
+
+<img src="img/s-3.png">
+
 
