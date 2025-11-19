@@ -22,4 +22,13 @@ theme: ThemeData(
 
 <img src="img/s-3.png">
 
+**Debug Console**
+<img src="img/s-3-1.png ">
+
+## Soal 4
+
+<img src="img/s-4.png">
+
+
+
 

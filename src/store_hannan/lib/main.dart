@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(myPizzas[index].pizzaName),
-            subtitle: Text(myPizzas[index].description),
+            subtitle: Text(myPizzas[index].description + ' - \$${myPizzas[index].price.toStringAsFixed(2)}'),
           );
         },
       ),
@@ -61,6 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
       Pizza myPizza = Pizza.fromJson(pizza);
       myPizzas.add(myPizza);
     }
+    String json = convertToJSON(myPizzas);
+    print(json);
     return myPizzas;
   }
 
@@ -72,5 +74,9 @@ class _MyHomePageState extends State<MyHomePage> {
         myPizzas = value;
       });
     });
+  }
+
+  String convertToJSON(List<Pizza> pizzas) {
+    return jsonEncode(pizzas.map((pizza) => jsonEncode(pizza)).toList());
   }
 }
