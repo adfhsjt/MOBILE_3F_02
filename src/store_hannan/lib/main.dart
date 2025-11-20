@@ -2,6 +2,7 @@ import 'dart:convert';
 import './model/pizza.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:path_provider/path_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,32 +30,45 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //     appBar: AppBar(title: const Text('JSON Hannan')),
+  //     // body: ListView.builder(
+  //     //   itemCount: myPizzas.length,
+  //     //   itemBuilder: (context, index) {
+  //     //     return ListTile(
+  //     //       title: Text(myPizzas[index].pizzaName),
+  //     //       subtitle: Text(myPizzas[index].description + ' - \$${myPizzas[index].price.toStringAsFixed(2)}'),
+  //     //     );
+  //     //   },
+  //     // ),
+  //     body: Center(
+  //       child: Column(
+  //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  //         children: [
+  //           Text('You have opened the app $appCounter times.'),
+  //           ElevatedButton(
+  //             onPressed: () {
+  //               deletePreference();
+  //             },
+  //             child: Text('Reset counter'),
+  //           ),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('JSON Hannan')),
-      // body: ListView.builder(
-      //   itemCount: myPizzas.length,
-      //   itemBuilder: (context, index) {
-      //     return ListTile(
-      //       title: Text(myPizzas[index].pizzaName),
-      //       subtitle: Text(myPizzas[index].description + ' - \$${myPizzas[index].price.toStringAsFixed(2)}'),
-      //     );
-      //   },
-      // ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Text('You have opened the app $appCounter times.'),
-            ElevatedButton(
-              onPressed: () {
-                deletePreference();
-              },
-              child: Text('Reset counter'),
-            ),
-          ],
-        ),
+      appBar: AppBar(title: const Text('Path Provider Hannan')),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text('Doc path: $documentsPath'),
+          Text('Temp path $tempPath'),
+        ],
       ),
     );
   }
@@ -62,6 +76,8 @@ class _MyHomePageState extends State<MyHomePage> {
   String pizzaString = '';
   List<Pizza> myPizzas = [];
   int appCounter = 0;
+  String documentsPath = '';
+  String tempPath = '';
 
   // Future readJsonFile() async {
   Future<List<Pizza>> readJsonFile() async {
@@ -85,7 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    readAndWritePreference();
+    getPaths();
+    // readAndWritePreference();
     // readJsonFile().then((value) {
     //   setState(() {
     //     myPizzas = value;
@@ -112,6 +129,15 @@ class _MyHomePageState extends State<MyHomePage> {
     await prefs.clear();
     setState(() {
       appCounter = 0;
+    });
+  }
+
+  Future getPaths() async {
+    final docDir = await getApplicationDocumentsDirectory();
+    final tempDir = await getTemporaryDirectory();
+    setState(() {
+      documentsPath = docDir.path;
+      tempPath = tempDir.path;
     });
   }
 }

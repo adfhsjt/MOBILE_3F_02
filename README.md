@@ -42,7 +42,9 @@ Karena menggunakan variabel const untuk kunci JSON, yang mencegah kesalahan keti
 
 <img src="img/s-6.gif">
 
+## Soal 7
 
+<img src="img/s-7.png">
 
 
 
