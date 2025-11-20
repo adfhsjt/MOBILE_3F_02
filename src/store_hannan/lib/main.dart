@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -67,13 +68,31 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Text('Doc path: $documentsPath'),
-          Text('Temp path $tempPath'),
+          // Text('Doc path: $documentsPath'),
+          // Text('Temp path $tempPath'),
+          // ElevatedButton(
+          //   child: const Text('Read File'),
+          //   onPressed: () => readFile(),
+          // ),
+          // Text(fileText),
+          TextField(controller: pwdController),
           ElevatedButton(
-            child: const Text('Read File'),
-            onPressed: () => readFile(),
+            child: const Text('Save Value'),
+            onPressed: () {
+              writeToSecureStorage();
+            },
           ),
-          Text(fileText),
+          ElevatedButton(
+            child: const Text('Read Value'),
+            onPressed: () {
+              readFromSecureStorage().then((value) {
+                setState(() {
+                  myPass = value;
+                });
+              });
+            },
+          ),
+          Text(myPass),
         ],
       ),
     );
@@ -86,6 +105,11 @@ class _MyHomePageState extends State<MyHomePage> {
   String tempPath = '';
   late File myFile;
   String fileText = '';
+  final pwdController = TextEditingController();
+  String myPass = '';
+
+  final storage = const FlutterSecureStorage();
+  final myKey = 'akuAdalahYin';
 
   // Future readJsonFile() async {
   Future<List<Pizza>> readJsonFile() async {
@@ -155,7 +179,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<bool> writeFile() async {
     try {
-      await myFile.writeAsString('Margherita, Capricciosa, Napoli, Pesanan Lek Hannan 2341720106');
+      await myFile.writeAsString(
+        'Margherita, Capricciosa, Napoli, Pesanan Lek Hannan 2341720106',
+      );
       return true;
     } catch (e) {
       return false;
@@ -174,5 +200,14 @@ class _MyHomePageState extends State<MyHomePage> {
       // On error, return false.
       return false;
     }
+  }
+
+  Future writeToSecureStorage() async {
+    await storage.write(key: myKey, value: pwdController.text);
+  }
+
+  Future<String> readFromSecureStorage() async {
+    String secret = await storage.read(key: myKey) ?? '';
+    return secret;
   }
 }

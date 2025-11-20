@@ -56,5 +56,8 @@ Langkah 3 (writeFile) berfungsi untuk menulis sebuah string berisi nama-nama piz
 
 <img src="img/s-8.gif">
 
+## Soal 9
+
+<img src="img/s-9.gif">
 
 
