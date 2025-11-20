@@ -46,5 +46,15 @@ Karena menggunakan variabel const untuk kunci JSON, yang mencegah kesalahan keti
 
 <img src="img/s-7.png">
 
+## Soal 8
+
+**Jawaban:**
+
+Langkah 3 (writeFile) berfungsi untuk menulis sebuah string berisi nama-nama pizza ke dalam file, sedangkan langkah 5 (readFile) berfungsi untuk membaca kembali isi file tersebut dan menampilkannya di antarmuka pengguna (UI).
+
+**Hasil Running:**
+
+<img src="img/s-8.gif">
+
 
 
