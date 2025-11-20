@@ -29,6 +29,15 @@ theme: ThemeData(
 
 <img src="img/s-4.png">
 
+**Jawaban:**
+
+Karena menggunakan variabel const untuk kunci JSON, yang mencegah kesalahan ketik (typo) dan memusatkan semua perubahan nama kunci hanya di satu tempat.
+
+**Hasil Running:**
+
+<img src="img/s-5.png">
+
+
 
 
 
