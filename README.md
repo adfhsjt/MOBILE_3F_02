@@ -38,6 +38,11 @@ Karena menggunakan variabel const untuk kunci JSON, yang mencegah kesalahan keti
 <img src="img/s-5.png">
 
 
+## Soal 6
+
+<img src="img/s-6.gif">
+
+
 
 
 

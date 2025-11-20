@@ -1,6 +1,7 @@
 import 'dart:convert';
 import './model/pizza.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,20 +33,35 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('JSON Hannan')),
-      body: ListView.builder(
-        itemCount: myPizzas.length,
-        itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(myPizzas[index].pizzaName),
-            subtitle: Text(myPizzas[index].description + ' - \$${myPizzas[index].price.toStringAsFixed(2)}'),
-          );
-        },
+      // body: ListView.builder(
+      //   itemCount: myPizzas.length,
+      //   itemBuilder: (context, index) {
+      //     return ListTile(
+      //       title: Text(myPizzas[index].pizzaName),
+      //       subtitle: Text(myPizzas[index].description + ' - \$${myPizzas[index].price.toStringAsFixed(2)}'),
+      //     );
+      //   },
+      // ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text('You have opened the app $appCounter times.'),
+            ElevatedButton(
+              onPressed: () {
+                deletePreference();
+              },
+              child: Text('Reset counter'),
+            ),
+          ],
+        ),
       ),
     );
   }
 
   String pizzaString = '';
   List<Pizza> myPizzas = [];
+  int appCounter = 0;
 
   // Future readJsonFile() async {
   Future<List<Pizza>> readJsonFile() async {
@@ -69,14 +85,33 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    readJsonFile().then((value) {
-      setState(() {
-        myPizzas = value;
-      });
-    });
+    readAndWritePreference();
+    // readJsonFile().then((value) {
+    //   setState(() {
+    //     myPizzas = value;
+    //   });
+    // });
   }
 
   String convertToJSON(List<Pizza> pizzas) {
     return jsonEncode(pizzas.map((pizza) => jsonEncode(pizza)).toList());
+  }
+
+  Future readAndWritePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    appCounter = prefs.getInt('appCounter') ?? 0;
+    appCounter++;
+    await prefs.setInt('appCounter', appCounter);
+    setState(() {
+      appCounter = appCounter;
+    });
+  }
+
+  Future deletePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.clear();
+    setState(() {
+      appCounter = 0;
+    });
   }
 }
