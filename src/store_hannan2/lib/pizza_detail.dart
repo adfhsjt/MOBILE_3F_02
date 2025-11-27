@@ -3,7 +3,13 @@ import 'model/pizza.dart';
 import 'httphelper.dart';
 
 class PizzaDetailScreen extends StatefulWidget {
-  const PizzaDetailScreen({super.key});
+  final Pizza pizza;
+  final bool isNew;
+  const PizzaDetailScreen({
+    super.key,
+    required this.pizza,
+    required this.isNew,
+  });
   @override
   State<PizzaDetailScreen> createState() => _PizzaDetailScreenState();
 }
@@ -76,12 +82,16 @@ class _PizzaDetailScreenState extends State<PizzaDetailScreen> {
               const SizedBox(height: 16),
               TextField(
                 controller: txtName,
-                decoration: const InputDecoration(hintText: 'Insert Pizza Name'),
+                decoration: const InputDecoration(
+                  hintText: 'Insert Pizza Name',
+                ),
               ),
               const SizedBox(height: 16),
               TextField(
                 controller: txtDescription,
-                decoration: const InputDecoration(hintText: 'Insert Description'),
+                decoration: const InputDecoration(
+                  hintText: 'Insert Description',
+                ),
               ),
               const SizedBox(height: 16),
               TextField(
@@ -116,10 +126,48 @@ class _PizzaDetailScreenState extends State<PizzaDetailScreen> {
                   postPizza();
                 },
               ),
+              const SizedBox(height: 16),
+              ElevatedButton(
+                child: const Text('Save Pizza'),
+                onPressed: () {
+                  savePizza();
+                },
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  @override
+  void initState() {
+    if (!widget.isNew) {
+      txtId.text = widget.pizza.id.toString();
+      txtName.text = widget.pizza.pizzaName;
+      txtDescription.text = widget.pizza.description;
+      txtPrice.text = widget.pizza.price.toString();
+      txtImageUrl.text = widget.pizza.imageUrl;
+      selectedSize = widget.pizza.size;
+    }
+    super.initState();
+  }
+
+  Future savePizza() async {
+    final helper = HttpHelper();
+    final pizza = Pizza(
+      id: int.tryParse(txtId.text),
+      pizzaName: txtName.text,
+      description: txtDescription.text,
+      price: double.tryParse(txtPrice.text) ?? 0.0,
+      imageUrl: txtImageUrl.text,
+      size: selectedSize,
+    );
+    final result = await (widget.isNew
+        ? helper.putPizza(pizza)
+        : helper.postPizza(pizza));
+    setState(() {
+      operationResult = result;
+    });
   }
 }

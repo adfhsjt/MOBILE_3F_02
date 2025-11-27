@@ -12,7 +12,7 @@ class Pizza {
   final String imageUrl;
   final String size;
 
-  Pizza({
+  const Pizza({
     this.id,
     this.pizzaName = '',
     this.description = '',

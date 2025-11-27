@@ -30,3 +30,10 @@ pada body json:
 
 <img src="img/s14-2.gif">
 
+## Soal 3
+
+**Hasil Running:**
+
+<img src="img/s14-3.gif">
+
+
