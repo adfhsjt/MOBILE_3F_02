@@ -37,3 +37,7 @@ pada body json:
 <img src="img/s14-3.gif">
 
 
+## Soal 4
+
+<img src="img/s14-4.gif">
+
